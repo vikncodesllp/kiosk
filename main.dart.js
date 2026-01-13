@@ -26943,6 +26943,8 @@ p=$.a33
 p.toString
 p=A.aJq(p,null).a.a>600}$.aFI=p
 q.dk("Bool","isTablet",p)
+window.localStorage.clear()
+window.sessionStorage.clear()
 p=$.aFI
 o=p?B.Ix:B.Iw
 A.anL(A.a([o,p?B.Iz:B.Iy],t.UW)).b5(new A.aC9(),t.P)
