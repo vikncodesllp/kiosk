@@ -49,7 +49,7 @@
   <script src="flutter_bootstrap.js" async></script>
   <script>
     (function () {
-      console.log("🧹 Clearing browser storage on every load...");
+
 
       try {
 
@@ -59,14 +59,6 @@
         sessionStorage.clear();
 
 
-        if (window.indexedDB && indexedDB.databases) {
-          indexedDB.databases().then(dbs => {
-            dbs.forEach(db => {
-              indexedDB.deleteDatabase(db.name);
-              console.log("Deleted DB:", db.name);
-            });
-          });
-        }
 
       } catch (e) {
         console.error("Storage clear failed:", e);
