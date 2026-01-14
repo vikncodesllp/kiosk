@@ -52,13 +52,13 @@
       console.log("🧹 Clearing browser storage on every load...");
 
       try {
-        // Clear Local Storage
+
         localStorage.clear();
 
-        // Clear Session Storage
+
         sessionStorage.clear();
 
-        // Clear IndexedDB (Flutter Web SharedPreferences)
+
         if (window.indexedDB && indexedDB.databases) {
           indexedDB.databases().then(dbs => {
             dbs.forEach(db => {
