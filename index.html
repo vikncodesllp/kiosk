@@ -49,26 +49,30 @@
   <script src="flutter_bootstrap.js" async></script>
   <script>
     (function () {
-      const urlParams = new URLSearchParams(window.location.search);
-      const qrId = urlParams.get('id');
+      console.log("🧹 Clearing browser storage on every load...");
 
-      const lastQr = localStorage.getItem('lastQrId');
-
-      if (qrId && lastQr !== qrId) {
-        console.log('🔁 New QR detected. Clearing storage...');
+      try {
+        // Clear Local Storage
         localStorage.clear();
 
-        if (window.indexedDB) {
+        // Clear Session Storage
+        sessionStorage.clear();
+
+        // Clear IndexedDB (Flutter Web SharedPreferences)
+        if (window.indexedDB && indexedDB.databases) {
           indexedDB.databases().then(dbs => {
-            dbs.forEach(db => indexedDB.deleteDatabase(db.name));
+            dbs.forEach(db => {
+              indexedDB.deleteDatabase(db.name);
+              console.log("Deleted DB:", db.name);
+            });
           });
         }
 
-        localStorage.setItem('lastQrId', qrId);
+      } catch (e) {
+        console.error("Storage clear failed:", e);
       }
     })();
   </script>
-
 </body>
 
 </html>
