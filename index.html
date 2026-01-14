@@ -47,6 +47,28 @@
 
 <body>
   <script src="flutter_bootstrap.js" async></script>
+  <script>
+    (function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const qrId = urlParams.get('id');
+
+      const lastQr = localStorage.getItem('lastQrId');
+
+      if (qrId && lastQr !== qrId) {
+        console.log('🔁 New QR detected. Clearing storage...');
+        localStorage.clear();
+
+        if (window.indexedDB) {
+          indexedDB.databases().then(dbs => {
+            dbs.forEach(db => indexedDB.deleteDatabase(db.name));
+          });
+        }
+
+        localStorage.setItem('lastQrId', qrId);
+      }
+    })();
+  </script>
+
 </body>
 
 </html>
