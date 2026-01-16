@@ -90847,7 +90847,7 @@ a5=A.bN(J.N(n.a,"branchId"))
 l=a5==null?1:a5
 k=A.bN(J.N(n.a,"userId"))
 j=A.fo(J.N(n.a,"Cash_Account"))
-i="https://www.api.viknbooks.com/api/v10/posholds/create-pos/salesOrder-kiosk/"
+i="https://www.saudiserver.viknbooks.com/api/v10/posholds/create-pos/salesOrder-kiosk/"
 h=31
 if(o.xr.j(0,!0)){h=32
 o.aN="VAT"}else if(o.y1.j(0,!0)){h=22
@@ -90923,7 +90923,7 @@ k=A.bN(J.N(l.a,"companyId"))
 a=A.fo(J.N(l.a,"branchID"))
 j=a==null?1:a
 i=A.bN(J.N(l.a,"userId"))
-h="https://www.api.viknbooks.com/api/v10/posholds/view/pos-sale/invoice-kiosk/"+a5+"/"
+h="https://www.saudiserver.viknbooks.com/api/v10/posholds/view/pos-sale/invoice-kiosk/"+a5+"/"
 A.i(h)
 a0=t.N
 g=A.az(["BranchID",j,"CompanyID",k,"CreatedUserID",i,"PriceRounding",2,"Type","SO"],a0,t.z)
@@ -90989,7 +90989,7 @@ k=A.bN(J.N(l.a,"companyId"))
 b=A.fo(J.N(l.a,"branchID"))
 j=b==null?1:b
 A.bN(J.N(l.a,"userId"))
-i="https://www.api.viknbooks.com/api/v10/posholds/kiosk-tables/?CompanyID="+A.i(k)+"&BranchID="+A.i(j)+"&IsGroupTable=false&GroupID=0"
+i="https://www.saudiserver.viknbooks.com/api/v10/posholds/kiosk-tables/?CompanyID="+A.i(k)+"&BranchID="+A.i(j)+"&IsGroupTable=false&GroupID=0"
 A.i(i)
 A.i(i)
 a=t.N
@@ -91140,7 +91140,7 @@ return A.y(A.hQ(),$async$vV)
 case 7:l=a0
 k=A.bN(J.N(l.a,"companyId"))
 j=A.bN(J.N(l.a,"branchId"))
-i=A.er("https://www.api.viknbooks.com/api/v11/posholds/product-group-list/?CompanyID="+A.i(k)+"&BranchID="+A.i(j)+"&is_used_group=true&IsActive=true&IsCombo=true",0,null)
+i=A.er("https://www.saudiserver.viknbooks.com/api/v11/posholds/product-group-list/?CompanyID="+A.i(k)+"&BranchID="+A.i(j)+"&is_used_group=true&IsActive=true&IsCombo=true",0,null)
 A.i(i)
 e=t.N
 s=8
@@ -91200,7 +91200,7 @@ k=A.bN(J.N(l.a,"companyId"))
 j=A.bN(J.N(l.a,"branchId"))
 i=!1
 if(a1==="Combo")i=!0
-h=A.er("https://www.api.viknbooks.com/api/v11/posholds/product-list/?CompanyID="+A.i(k)+"&BranchID="+A.i(j)+"&GroupID="+a2+"&IsCombo="+A.i(i),0,null)
+h=A.er("https://www.saudiserver.viknbooks.com/api/v11/posholds/product-list/?CompanyID="+A.i(k)+"&BranchID="+A.i(j)+"&GroupID="+a2+"&IsCombo="+A.i(i),0,null)
 A.i(h)
 c=t.N
 s=8
@@ -91253,7 +91253,7 @@ k=A.bN(J.N(l.a,"companyId"))
 a2=A.fo(J.N(l.a,"branchID"))
 j=a2==null?1:a2
 i=A.bN(J.N(l.a,"userId"))
-h="https://www.api.viknbooks.com/api/v12/users/get-default-kiosk-values/"
+h="https://www.saudiserver.viknbooks.com/api/v12/users/get-default-kiosk-values/"
 A.i(h)
 a3=t.N
 g=A.az(["BranchID",j,"CompanyID",k,"userId",i],a3,t.z)
@@ -91306,10 +91306,10 @@ a3=J.N(e,"CurrencySymbol")
 a1.sl(0,a3==null?"":a3)
 a1=m.x1
 a3=J.N(e,"CompanyLogo")
-a1.sl(0,"https://www.api.viknbooks.com"+A.i(a3==null?"":a3))
+a1.sl(0,"https://www.saudiserver.viknbooks.com"+A.i(a3==null?"":a3))
 a3=a.fx
 a4=J.N(e,"CompanyLogo")
-a3.sl(0,"https://www.api.viknbooks.com"+A.i(a4==null?"":a4))
+a3.sl(0,"https://www.saudiserver.viknbooks.com"+A.i(a4==null?"":a4))
 A.i(a1.gl(0))
 A.i(a.fx.gl(0))
 A.i(a.fr.gl(0))
@@ -91346,7 +91346,7 @@ n.db.$1(!0)
 s=6
 return A.y(A.hQ(),$async$iW)
 case 6:m=a7
-l=A.er("https://www.api.viknbooks.com/api/v12/posholds/qr/sync/?id="+a2+"&CompanyID="+a3+"&BranchID="+a4+"&UserID="+a5,0,null)
+l=A.er("https://www.saudiserver.viknbooks.com/api/v12/posholds/qr/sync/?id="+a2+"&CompanyID="+a3+"&BranchID="+a4+"&UserID="+a5,0,null)
 A.i(l)
 e=t.N
 s=7
